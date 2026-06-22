@@ -29,7 +29,7 @@ def _api_headers():
 def check_pool_status():
     try:
         resp = requests.get(
-            f"{MASTER_URL}/api/status",
+            f"{MASTER_URL}/api/pool-status",
             headers=_api_headers(),
             timeout=10
         )
