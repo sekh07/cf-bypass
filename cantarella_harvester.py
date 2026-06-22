@@ -65,7 +65,8 @@ def generate_cantarella_token():
         resp = requests.post(CANTARELLA_API_URL, json={
             "mode": "turnstile",
             "domain": "https://winna.com",
-            "siteKey": SITEKEY
+            "siteKey": SITEKEY,
+            "action": "promo_claim"
         }, timeout=45)
         
         if resp.status_code == 200:
